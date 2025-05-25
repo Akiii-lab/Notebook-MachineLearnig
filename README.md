@@ -11,31 +11,35 @@ Este README explica cómo preparar el entorno de desarrollo utilizando **pyenv-w
 
 ---
 
-## Paso 1: Instalar pyenv-win
+# Paso 1: Instalar pyenv-win
 
 Para gestionar versiones de Python en Windows usaremos [pyenv-win](https://github.com/pyenv-win/pyenv-win).
 
 Clona el repositorio e instala pyenv-win con los siguientes comandos:
 
+En PowerShell: 
+
+```bash
+git clone https://github.com/pyenv-win/pyenv-win.git "$HOME\.pyenv"
+```
+
+En CMD:
 ```bash
 git clone https://github.com/pyenv-win/pyenv-win.git %USERPROFILE%\.pyenv
 ```
 
-Luego, agrega las variables de entorno en tu perfil para que pyenv esté disponible en la terminal:
+Luego, agrega las variables de entorno en tu perfil para que pyenv esté disponible en la terminal
 
-Añade 
-```bash
-%USERPROFILE%\.pyenv\pyenv-win\bin
-```
-y 
-```bash
-%USERPROFILE%\.pyenv\pyenv-win\shims 
-```
-a la variable de entorno PATH.
+Para una instalacion de este proyecto es recomendable seguir el [tutorial_de_pynev-win](https://github.com/pyenv-win/pyenv-win/blob/master/docs/installation.md#git-commands)
+
+
+Ahora terminado de agregar las variables de entorno es recomendable reiniciar la terminal y ejecutar:
 
 ```bash
 pyenv --version
 ```
+
+Para ver la version de nuestro pyenv
 
 # Paso 2: Instalar Python 3.11.9
 Con pyenv instalado, instala la versión de Python requerida para el proyecto:
@@ -61,10 +65,11 @@ Desde la carpeta raíz del proyecto ejecuta:
 ```bash
 python -m venv tf-env
 ```
-En caso de no servir puede usar la python.exe del root
+En caso de no servir puede usar la python.exe del root (cambiar "tu-usuario" por el nombre de tu usuario) ejecuta este comando :
 ```bash
- C:\Users\%USERPROFILE%\.pyenv\pyenv-win\versions\3.11.9\python.exe -m venv tf-env
+ C:\Users\tu-usuario\.pyenv\pyenv-win\versions\3.11.9\python.exe -m venv tf-env
 ```
+
 
 Activa el entorno virtual:
 
