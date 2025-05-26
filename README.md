@@ -17,13 +17,39 @@ Este README explica cómo preparar el entorno de desarrollo utilizando **pyenv-w
 
 Para la instalación de pyenv-win mediante comandos git en este proyecto es recomendable seguir el [tutorial de instalación.](https://github.com/pyenv-win/pyenv-win/blob/master/docs/installation.md#git-commands), sin embargo, dentro de ese mismo repositorio encontrarás otras formas de instalación para que realices la que mejor te parezca.
 
+<<<<<<< HEAD
 Luego de agregar las variables de entorno en tu perfil para que **pyenv** esté disponible en la terminal, es recomendable reiniciar la terminar y ejecutar
+=======
+Clona el repositorio e instala pyenv-win con los siguientes comandos:
+
+En PowerShell: 
+
+```bash
+git clone https://github.com/pyenv-win/pyenv-win.git "$HOME\.pyenv"
+```
+
+En CMD:
+```bash
+git clone https://github.com/pyenv-win/pyenv-win.git %USERPROFILE%\.pyenv
+```
+
+Luego, agrega las variables de entorno en tu perfil para que pyenv esté disponible en la terminal
+
+Para una instalacion de este proyecto es recomendable seguir el [tutorial_de_pynev-win](https://github.com/pyenv-win/pyenv-win/blob/master/docs/installation.md#git-commands)
+
+
+Ahora terminado de agregar las variables de entorno es recomendable reiniciar la terminal y ejecutar:
+>>>>>>> cbd1d4936fecbc8d59e112bb4ad205a6d9b4bf88
 
 ```bash
 pyenv --version
 ```
 
+<<<<<<< HEAD
 Para verificar la version de nuestro pyenv
+=======
+Para ver la version de nuestro pyenv
+>>>>>>> cbd1d4936fecbc8d59e112bb4ad205a6d9b4bf88
 
 # Paso 2: Instalar Python 3.11.9
 
@@ -53,13 +79,18 @@ Desde la carpeta raíz del proyecto ejecuta:
 ```bash
 python -m venv tf-env
 ```
+<<<<<<< HEAD
 *Puedes reemplazar 'tf-env' por el nombre que desees ponerle a tu entorno virtual.*
 
 En caso de no servir puede usar la python.exe del root (cambiar "tu-usuario" por el nombre de tu usuario) ejecutando este comando:
 
+=======
+En caso de no servir puede usar la python.exe del root (cambiar "tu-usuario" por el nombre de tu usuario) ejecuta este comando :
+>>>>>>> cbd1d4936fecbc8d59e112bb4ad205a6d9b4bf88
 ```bash
  C:\Users\tu-usuario\.pyenv\pyenv-win\versions\3.11.9\python.exe -m venv tf-env
 ```
+
 
 Activa el entorno virtual:
 
