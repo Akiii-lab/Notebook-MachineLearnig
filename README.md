@@ -1,5 +1,7 @@
 # Configuración del entorno para el proyecto Notebook-MachineLearning
 
+Para gestionar versiones de Python en Windows usaremos [pyenv-win](https://github.com/pyenv-win/pyenv-win).
+
 Este README explica cómo preparar el entorno de desarrollo utilizando **pyenv-win** para manejar versiones de Python, instalar Python 3.11.9 y crear un entorno virtual.
 
 ---
@@ -11,33 +13,20 @@ Este README explica cómo preparar el entorno de desarrollo utilizando **pyenv-w
 
 ---
 
-## Paso 1: Instalar pyenv-win
+# Paso 1: Instalar pyenv-win
 
-Para gestionar versiones de Python en Windows usaremos [pyenv-win](https://github.com/pyenv-win/pyenv-win).
+Para la instalación de pyenv-win mediante comandos git en este proyecto es recomendable seguir el [tutorial de instalación.](https://github.com/pyenv-win/pyenv-win/blob/master/docs/installation.md#git-commands), sin embargo, dentro de ese mismo repositorio encontrarás otras formas de instalación para que realices la que mejor te parezca.
 
-Clona el repositorio e instala pyenv-win con los siguientes comandos:
-
-```bash
-git clone https://github.com/pyenv-win/pyenv-win.git %USERPROFILE%\.pyenv
-```
-
-Luego, agrega las variables de entorno en tu perfil para que pyenv esté disponible en la terminal:
-
-Añade 
-```bash
-%USERPROFILE%\.pyenv\pyenv-win\bin
-```
-y 
-```bash
-%USERPROFILE%\.pyenv\pyenv-win\shims 
-```
-a la variable de entorno PATH.
+Luego de agregar las variables de entorno en tu perfil para que **pyenv** esté disponible en la terminal, es recomendable reiniciar la terminar y ejecutar
 
 ```bash
 pyenv --version
 ```
 
+Para verificar la version de nuestro pyenv
+
 # Paso 2: Instalar Python 3.11.9
+
 Con pyenv instalado, instala la versión de Python requerida para el proyecto:
 
 ```bash
@@ -45,11 +34,13 @@ Con pyenv instalado, instala la versión de Python requerida para el proyecto:
 ```
 
 Configura la versión local de Python para este proyecto:
+
 ```bash
 pyenv local 3.11.9
 ```
 
 Verifica que la versión está activa:
+
 ```bash
 pyenv versions
 ```
@@ -58,12 +49,16 @@ Deberías ver 3.11.9 marcada con un asterisco (*) indicando que está activa.
 # Paso 3: Crear y activar entorno virtual
 
 Desde la carpeta raíz del proyecto ejecuta:
+
 ```bash
 python -m venv tf-env
 ```
-En caso de no servir puede usar la python.exe del root
+*Puedes reemplazar 'tf-env' por el nombre que desees ponerle a tu entorno virtual.*
+
+En caso de no servir puede usar la python.exe del root (cambiar "tu-usuario" por el nombre de tu usuario) ejecutando este comando:
+
 ```bash
- C:\Users\%USERPROFILE%\.pyenv\pyenv-win\versions\3.11.9\python.exe -m venv tf-env
+ C:\Users\tu-usuario\.pyenv\pyenv-win\versions\3.11.9\python.exe -m venv tf-env
 ```
 
 Activa el entorno virtual:
@@ -84,11 +79,18 @@ python --version
 ```
 # Paso 4: Instalar dependencias
 
-Hacemos:
+Instalamos dependencias con el comando pip:
+
 ```bash
  pip install numpy pandas matplotlib seaborn pillow opencv-python scikit-learn tensorflow
 ```
 
 # Paso 5: Cambiar Kernel de Jupyter
 
-Simplemente vamos a Visual Studio Code y en la parte superior izquierda donde aparece una version de python como 3.11.9, dar click y seleccionar entornos de python, escoger la version de pyenv
+Simplemente vamos a Visual Studio Code y en la parte superior izquierda donde aparece una version de python como 3.11.9, dar click y seleccionar entornos de python
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+Escoger la version de pyenv
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
