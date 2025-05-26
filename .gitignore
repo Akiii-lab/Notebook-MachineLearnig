@@ -2,5 +2,6 @@
 /.python-version
 /tf-env
 /ia-env
-./Dockerfile
-./docker-compose.yml
+/Dockerfile
+/docker-compose.yml
+/notebooks
